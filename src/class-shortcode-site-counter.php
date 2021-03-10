@@ -20,7 +20,7 @@ namespace KokoAnalytics;
     );
     $args = shortcode_atts( $default_args, $args, self::SHORTCODE );
     $count = $this->get_total_views($args['days']);
-    $html = sprintf( PHP_EOL . ' <span class="koko-analytics-post-count">Visitors: %s</span>', $count );
+    $html = sprintf( PHP_EOL . ' <span class="koko-analytics-post-count">%s</span>', $count );
     return $html;
   }
 
