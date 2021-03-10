@@ -8,11 +8,11 @@
 namespace KokoAnalytics;
 
  class ShortCode_Site_Counter {
-	const SHORTCODE = 'koko_analytics_site_counter';
+  const SHORTCODE = 'koko_analytics_site_counter';
 
   public function init() {
-		add_shortcode( self::SHORTCODE, array( $this, 'content' ) );
-	}
+    add_shortcode( self::SHORTCODE, array( $this, 'content' ) );
+  }
 
   public function content( $args ) {
     $default_args = array(
