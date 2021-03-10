@@ -103,12 +103,6 @@ function get_settings() {
 	return $settings;
 }
 
-function get_total_views($days) {
-	global $wpdb;
-	$sql = "SELECT SUM(visitors) FROM {$wpdb->prefix}koko_analytics_site_stats";
-	return $wpdb->get_var( $sql );
-}
-
 function get_most_viewed_posts( array $args ) {
 	global $wpdb;
 	$default_args = array(
