@@ -16,10 +16,10 @@ namespace KokoAnalytics;
 
   public function content( $args ) {
     $default_args = array(
-			'days' => 0,
+			'days' => -1,
 		);
     $args = shortcode_atts( $default_args, $args, self::SHORTCODE );
-    $count = 22;
+    $count = get_total_views($args['days']);
     $html = sprintf( PHP_EOL . ' <span class="koko-analytics-post-count">Visitors: %s</span>', $count );
     return $html;
   }
