@@ -35,6 +35,6 @@ namespace KokoAnalytics;
       $start_date = $datetime->format('Y-m-d');
       $sql = $wpdb->prepare("SELECT SUM(visitors) FROM {$wpdb->prefix}koko_analytics_site_stats s WHERE s.date >= %s", array( $start_date ) );
     }
-    return $wpdb->get_var( $sql ) || 0;
+    return (int)($wpdb->get_var( $sql ) ?? 0);
   }
 }
